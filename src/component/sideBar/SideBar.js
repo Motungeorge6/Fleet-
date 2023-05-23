@@ -1,90 +1,36 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { upperLinks, lowerLinks } from "./SideBarLink";
+import {NavLink} from "react-router-dom";
+import {upperLinks, lowerLinks} from "./SideBarLink";
 import "./Sidebar.css";
 import Logo from "../assets/logo.png";
+import {AppLogoIcon, DashboardIcon, HistoryIcon, PersonIcon} from "../../icons";
 
 const SideBar = () => {
+  const links = [
+    {title: "Dashbaord", icon: DashboardIcon},
+    {title: "Booking history", icon: HistoryIcon},
+    {title: "Profile", icon: PersonIcon},
+  ];
   return (
-    <>
-      <div
-        style={{
-          background: "#ECF1F8",
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          width: "272px",
-          justifyContent: "space-between",
-          padding: "20px 0",
-        }}
-      >
-        {/* <img src={Logo} /> */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {upperLinks.map((link) => {
-            const { id, url, text } = link;
-            return (
-              <div className="sidebar-links">
-                <NavLink
-                  to={url}
-                  style={{
-                    textDecoration: "none",
-
-                    margin: "auto",
-                  }}
-                  className={({ isActive }) =>
-                    `sidebar-links ${
-                      isActive ? "activeClassName" : "sidebar-links"
-                    }`
-                  }
-                >
-                  {text}
-                </NavLink>
-              </div>
-            );
-          })}
-        </div>
-        <div
-          style={{
-            color: "white",
-            fontSize: "24px",
-            height: "63px",
-            width: "270px",
-
-            justifyContent: "space-between",
-            gap: "0.5rem",
-            display: "flex",
-          }}
-        >
-          {lowerLinks.map((link) => {
-            const { id, url, text } = link;
-            return (
-              <div>
-                <NavLink
-                  to={url}
-                  style={{
-                    textDecoration: "none",
-
-                    fontSize: "24px",
-                  }}
-                  className={({ isActive }) =>
-                    `sidebar-links ${
-                      isActive ? "activeClassName" : "sidebar-links"
-                    }`
-                  }
-                >
-                  {text}
-                </NavLink>
-              </div>
-            );
-          })}
-        </div>
+    <div className="sidebar-container">
+      <div className="logo-container">
+        <AppLogoIcon />
       </div>
-    </>
+
+      <div className="sidebar-links-container">
+        {links.map(item => (
+          <div
+            key={item.title}
+            className={`each-link ${
+              item.title === "Dashbaord" && "active-link"
+            }`}
+          >
+            <item.icon />
+            <p>{item.title}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

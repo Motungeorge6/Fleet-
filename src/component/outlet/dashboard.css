@@ -1,0 +1,91 @@
+.dashboard-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px 17px;
+  box-sizing: border-box;
+}
+
+.header-text {
+  width: 100%;
+}
+
+.header-text h1 {
+  width: 322px;
+  height: 38px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 38px;
+  color: #80078a;
+}
+
+.request-ride-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.request-ride-container h1 {
+  padding: 0;
+  margin: 0;
+  height: 24px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #262626;
+}
+
+.request-ride-container .request-ride-form-container {
+  width: 100%;
+  height: 72px;
+  background: #ecf1f8;
+  opacity: 0.8;
+  border-radius: 13px;
+  display: flex;
+  padding-left: 26px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.request-ride-form-container .each-input-container {
+  width: 222px;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 8px;
+  width: calc((100% - 67px - 20px) / 4);
+}
+
+.request-ride-form-container .divider {
+  width: 47px;
+  height: 0px;
+  border: 0.5px solid #80078a;
+  transform: rotate(90deg);
+}
+
+.request-ride-container .input-button {
+  width: 129px;
+  height: 72px;
+  background: #80078a;
+  border-radius: 0px 13px 13px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.input-button p {
+  width: 67px;
+  height: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}

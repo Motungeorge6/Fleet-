@@ -1,7 +1,7 @@
 import React from "react";
 import Mainbar from "../mainBar/Mainbar";
 import SideBar from "../sideBar/SideBar";
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -10,6 +10,7 @@ const Dashboard = () => {
         width: "100vw",
         height: "100vh",
         display: "flex",
+        overflow: "hidden",
         flexDirection: "row",
       }}
     >
@@ -23,7 +24,7 @@ const Dashboard = () => {
         <SideBar />
       </div>
       <div
-        className={{
+        style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
