@@ -58,6 +58,20 @@
   background: #ffffff;
   border-radius: 8px;
   width: calc((100% - 67px - 20px) / 4);
+  padding: 0 7.7px;
+}
+
+.each-input-container input,
+select {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+input:focus,
+select:focus {
+  outline: none;
 }
 
 .request-ride-form-container .divider {

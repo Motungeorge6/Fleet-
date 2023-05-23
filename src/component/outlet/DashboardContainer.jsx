@@ -41,13 +41,26 @@ const DashboardCpntainer = () => {
         <h1>Request for your ride</h1>
 
         <div className="request-ride-form-container">
-          <div className="each-input-container"></div>
+          <div className="each-input-container">
+            <input placeholder="Destination address" type="text" />
+          </div>
           <div className="divider" />
-          <div className="each-input-container"></div>
+          <div className="each-input-container">
+            <select placeholder="Local area">
+              <option defaultValue="local Area">Local Area </option>
+              <option> dropdown1</option>
+              <option> dropdown2</option>
+              <option> dropdown3</option>
+            </select>
+          </div>
           <div className="divider" />
-          <div className="each-input-container"></div>
+          <div className="each-input-container">
+            <input placeholder="Schedule" type="date" />
+          </div>
           <div className="divider" />
-          <div className="each-input-container"></div>
+          <div className="each-input-container">
+            <input placeholder="Number of seats" type="text" />
+          </div>
 
           <div className="input-button">
             <p>Request</p>
