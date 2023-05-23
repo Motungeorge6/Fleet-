@@ -1,0 +1,17 @@
+.activeClassName {
+  color: white;
+  font-weight: bold;
+  background-color: #80078a;
+  width: 300vw;
+  height: 70px;
+  padding: 20px;
+}
+
+.sidebar-links {
+  color: black;
+  font-size: 24px;
+  margin-top: 20px;
+  height: 63px;
+  width: 270px;
+  /* background-color: #80078a; */
+}
